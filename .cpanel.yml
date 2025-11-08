@@ -1,4 +1,5 @@
- deployment:
-      tasks:
-        - export DEPLOYPATH=/home/grendelm/public_html/grendelmen/
-        - /bin/cp -R * $DEPLOYPATH
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/grendelm/public_html/grendelmen/
+    - /bin/cp -R . $DEPLOYPATH
