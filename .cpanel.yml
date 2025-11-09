@@ -2,4 +2,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/grendelm/public_html/grendelmen/
-    - /bin/cp -R . $DEPLOYPATH
+    - /bin/npm install
+    - /bin/npm run build
+    - /bin/cp -R dist/* $DEPLOYPATH
