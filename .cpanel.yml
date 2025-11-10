@@ -1,10 +1,8 @@
 ---
-# Deployment configuration for cPanel
+# Deployment configuration for cPanel - deploys pre-built files from GitHub
 deployment:
   tasks:
     - export DEPLOYPATH=/home/grendelm/public_html/grendelmen/
-    - /bin/npm install
-    - /bin/npm run build
     - /bin/ls -la dist/
     - /bin/cp -R dist/* $DEPLOYPATH
     - /bin/cp public/.htaccess $DEPLOYPATH/
